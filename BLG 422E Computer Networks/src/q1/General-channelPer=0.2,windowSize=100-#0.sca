@@ -1,0 +1,205 @@
+version 3
+run General-8-20251217-23:08:41-8802
+attr configname General
+attr datetime 20251217-23:08:41
+attr datetimef 20251217-230841
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars "$channelPer=0.2, $windowSize=100"
+attr iterationvarsd channelPer=0.2/windowSize=100
+attr iterationvarsf channelPer=0.2,windowSize=100-
+attr measurement "$channelPer=0.2, $windowSize=100"
+attr network hw1q1.rdt.Rdt3Network
+attr processid 8802
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 8
+attr seedset 8
+itervar channelPer 0.2
+itervar windowSize 100
+config network hw1q1.rdt.Rdt3Network
+config **.s2c.per 0.2
+config **.c2s.per 0.2
+config **.s2c.datarate 10Mbps
+config **.c2s.datarate 10Mbps
+config **.s2c.delay 10ms
+config **.c2s.delay 10ms
+config **.client.maxMsgSize 1000B
+config **.client.requestTime 0s
+config **.server.maxMsgSize 1000B
+config **.server.windowSize 100
+config **.server.fileSizeBytes 200000B
+config **.server.timeout 0.2s
+
+scalar Rdt3Network.server completionTime 11.632870583
+scalar Rdt3Network.server throughput 137541.28773153
+scalar Rdt3Network.server totalRetransmissions 4337
+par Rdt3Network.client.out.c2s typename "\"hw1q1.rdt.LossyLink\""
+par Rdt3Network.client.out.c2s disabled false
+attr mutable ""
+par Rdt3Network.client.out.c2s delay 0.01s
+attr mutable ""
+attr unit s
+par Rdt3Network.client.out.c2s datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par Rdt3Network.client.out.c2s ber 0
+attr mutable ""
+par Rdt3Network.client.out.c2s per 0.2
+attr mutable ""
+par Rdt3Network.server.out.s2c typename "\"hw1q1.rdt.LossyLink\""
+par Rdt3Network.server.out.s2c disabled false
+attr mutable ""
+par Rdt3Network.server.out.s2c delay 0.01s
+attr mutable ""
+attr unit s
+par Rdt3Network.server.out.s2c datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par Rdt3Network.server.out.s2c ber 0
+attr mutable ""
+par Rdt3Network.server.out.s2c per 0.2
+attr mutable ""
+par Rdt3Network.client typename "\"hw1q1.rdt.RdtClient\""
+par Rdt3Network.client maxMsgSize 1000B
+attr unit B
+par Rdt3Network.client requestTime 0s
+attr unit s
+scalar Rdt3Network.client dataDelay:mean 0.01479226063
+attr "" ""
+attr recordingmode mean
+attr source dataDelay
+attr title "One-way data delay, mean"
+statistic Rdt3Network.client dataDelay:histogram
+field count 200
+field mean 0.01479226063
+field stddev 0.0047468170673603
+field min 0.0108512
+field max 0.032982426
+field sum 2.958452126
+field sqrsum 0.048246117091095
+attr "" ""
+attr recordingmode histogram
+attr source dataDelay
+attr title "One-way data delay"
+bin	-inf	0
+bin	0.005	0
+bin	0.0055	0
+bin	0.006	0
+bin	0.0065	0
+bin	0.007	0
+bin	0.0075	0
+bin	0.008	0
+bin	0.0085	0
+bin	0.009	0
+bin	0.0095	0
+bin	0.01	0
+bin	0.0105	41
+bin	0.011	0
+bin	0.0115	32
+bin	0.012	0
+bin	0.0125	27
+bin	0.013	20
+bin	0.0135	0
+bin	0.014	13
+bin	0.0145	0
+bin	0.015	9
+bin	0.0155	8
+bin	0.016	0
+bin	0.0165	6
+bin	0.017	0
+bin	0.0175	6
+bin	0.018	0
+bin	0.0185	6
+bin	0.019	5
+bin	0.0195	0
+bin	0.02	4
+bin	0.0205	0
+bin	0.021	3
+bin	0.0215	3
+bin	0.022	0
+bin	0.0225	2
+bin	0.023	0
+bin	0.0235	2
+bin	0.024	2
+bin	0.0245	0
+bin	0.025	2
+bin	0.0255	0
+bin	0.026	1
+bin	0.0265	0
+bin	0.027	1
+bin	0.0275	1
+bin	0.028	0
+bin	0.0285	1
+bin	0.029	0
+bin	0.0295	1
+bin	0.03	1
+bin	0.0305	0
+bin	0.031	1
+bin	0.0315	0
+bin	0.032	1
+bin	0.0325	1
+bin	0.033	0
+bin	0.0335	0
+bin	0.034	0
+bin	0.0345	0
+bin	0.035	0
+bin	0.0355	0
+bin	0.036	0
+bin	0.0365	0
+bin	0.037	0
+bin	0.0375	0
+bin	0.038	0
+bin	0.0385	0
+bin	0.039	0
+scalar Rdt3Network.client corruptedPkDrop:count 916
+attr "" ""
+attr recordingmode count
+attr source corruptedPkDrop
+attr title "Corrupted packets dropped, count"
+scalar Rdt3Network.client ackPkSent:count 3545
+attr "" ""
+attr recordingmode count
+attr source ackPkSent
+attr title "ACK packets sent, count"
+scalar Rdt3Network.client dataPkRcvd:count 200
+attr "" ""
+attr recordingmode count
+attr source dataPkRcvd
+attr title "Data packets received, count"
+par Rdt3Network.server typename "\"hw1q1.rdt.RdtServer\""
+par Rdt3Network.server maxMsgSize 1000B
+attr unit B
+par Rdt3Network.server windowSize 100
+par Rdt3Network.server fileSizeBytes 200000B
+attr unit B
+par Rdt3Network.server timeout 0.2s
+attr unit s
+scalar Rdt3Network.server reqPkRcvd:count 1
+attr "" ""
+attr recordingmode count
+attr source reqPkRcvd
+attr title "Request packets received, count"
+scalar Rdt3Network.server ackPkRcvd:count 2814
+attr "" ""
+attr recordingmode count
+attr source ackPkRcvd
+attr title "ACK packets received, count"
+scalar Rdt3Network.server dataPkRetx:count 4337
+attr "" ""
+attr recordingmode count
+attr source dataPkRetx
+attr title "Data packets retransmitted, count"
+scalar Rdt3Network.server dataPkSent:count 200
+attr "" ""
+attr recordingmode count
+attr source dataPkSent
+attr title "Data packets sent, count"
+scalar Rdt3Network.server corruptedPkDrop:count 731
+attr "" ""
+attr recordingmode count
+attr source corruptedPkDrop
+attr title "Corrupted packets dropped, count"
+par Rdt3Network typename "\"hw1q1.rdt.Rdt3Network\""
+
